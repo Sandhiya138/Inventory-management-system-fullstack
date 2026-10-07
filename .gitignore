@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production Build Artifacts
+dist/
+**/dist/
+target/
+**/target/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,228 @@
+/* Deep Plum, Burgundy, Terracotta, Warm Gold, Muted Cream, Sage & Coral Theme */
+
+:root,
+[data-theme="dark"] {
+  /* Surface Layers (Deep Plum Base) */
+  --bg-app: #12091c;
+  --bg-surface-0: #170d24;
+  --bg-surface-1: #1e112e;
+  --bg-surface-2: #27163c;
+  --bg-surface-3: #321c4c;
+  --bg-card: #201231;
+  --bg-card-hover: #2b1842;
+  --bg-glass: rgba(30, 17, 46, 0.75);
+  --bg-input: #150b22;
+  --bg-modal: #231336;
+  --bg-overlay: rgba(10, 4, 16, 0.82);
+  --bg-sidebar: linear-gradient(180deg, #170d24 0%, #12081c 100%);
+  --bg-topbar: rgba(23, 13, 36, 0.85);
+
+  /* Primary Brand Accents */
+  --color-plum: #381a4d;
+  --color-wine: #5e1933;
+  --color-wine-hover: #751f40;
+  --color-burgundy: #7a1d3f;
+  --color-terracotta: #c85a38;
+  --color-terracotta-hover: #db6a47;
+  --color-gold: #d4af37;
+  --color-gold-light: #f1cb68;
+  --color-gold-dark: #b89528;
+  --color-cream: #faf5ed;
+  --color-cream-muted: #e7ded0;
+  --color-sage: #7a9a83;
+  --color-sage-light: #9abfa4;
+  --color-coral: #e06d53;
+  --color-coral-light: #f3856d;
+
+  /* Typography Colors */
+  --text-main: #fcf9f5;
+  --text-primary: #f5ede2;
+  --text-secondary: #c9b8be;
+  --text-muted: #958293;
+  --text-gold: #eec86b;
+  --text-terracotta: #df7252;
+  --text-on-accent: #ffffff;
+
+  /* Status Colors */
+  --status-healthy-bg: rgba(122, 154, 131, 0.18);
+  --status-healthy-border: rgba(122, 154, 131, 0.4);
+  --status-healthy-text: #9ec2a8;
+
+  --status-low-bg: rgba(212, 175, 55, 0.18);
+  --status-low-border: rgba(212, 175, 55, 0.4);
+  --status-low-text: #f3d077;
+
+  --status-critical-bg: rgba(224, 109, 83, 0.2);
+  --status-critical-border: rgba(224, 109, 83, 0.45);
+  --status-critical-text: #f89078;
+
+  --status-out-bg: rgba(186, 45, 74, 0.24);
+  --status-out-border: rgba(186, 45, 74, 0.5);
+  --status-out-text: #f06a88;
+
+  --status-expiring-bg: rgba(200, 90, 56, 0.2);
+  --status-expiring-border: rgba(200, 90, 56, 0.45);
+  --status-expiring-text: #f0896b;
+
+  --status-expired-bg: rgba(130, 20, 45, 0.28);
+  --status-expired-border: rgba(130, 20, 45, 0.6);
+  --status-expired-text: #e85573;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(212, 175, 55, 0.12);
+  --border-medium: rgba(212, 175, 55, 0.22);
+  --border-card: rgba(122, 29, 63, 0.35);
+  --border-input: rgba(212, 175, 55, 0.18);
+  --border-focus: #c85a38;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #7a1d3f 0%, #c85a38 100%);
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #c85a38 100%);
+  --gradient-terracotta: linear-gradient(135deg, #c85a38 0%, #e06d53 100%);
+  --gradient-card: linear-gradient(145deg, #231336 0%, #1a0d2a 100%);
+  --gradient-card-elevated: linear-gradient(145deg, #2d1744 0%, #1f0f32 100%);
+  --gradient-dark-glass: linear-gradient(135deg, rgba(42, 22, 60, 0.7) 0%, rgba(26, 13, 38, 0.8) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(5, 1, 9, 0.3);
+  --shadow-md: 0 6px 18px rgba(5, 1, 9, 0.45);
+  --shadow-lg: 0 14px 34px rgba(5, 1, 9, 0.6);
+  --shadow-glow-terracotta: 0 0 20px rgba(200, 90, 56, 0.35);
+  --shadow-glow-gold: 0 0 18px rgba(212, 175, 55, 0.3);
+  --shadow-glow-wine: 0 0 24px rgba(122, 29, 63, 0.4);
+
+  /* Animation transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s ease;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout dimensions */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 78px;
+  --topbar-height: 72px;
+}
+
+[data-theme="light"] {
+  /* Surface Layers (Clean, Warm Luxury Cream / Off-White Base) */
+  --bg-app: #f6f2ea;
+  --bg-surface-0: #eee7db;
+  --bg-surface-1: #e4dccc;
+  --bg-surface-2: #d8cdba;
+  --bg-surface-3: #cbbda7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #faf7f2;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-input: #ffffff;
+  --bg-modal: #ffffff;
+  --bg-overlay: rgba(20, 9, 28, 0.65);
+  --bg-sidebar: #ffffff;
+  --bg-topbar: rgba(255, 255, 255, 0.94);
+
+  /* Brand Accents adapted for Crisp Visibility on Light Backgrounds */
+  --color-plum: #421854;
+  --color-wine: #6e1939;
+  --color-wine-hover: #54112a;
+  --color-burgundy: #7a1d3f;
+  --color-terracotta: #b84b29;
+  --color-terracotta-hover: #9e3d1f;
+  --color-gold: #8c6a08;
+  --color-gold-light: #ad8310;
+  --color-gold-dark: #6e5208;
+  --color-cream: #1e0d27;
+  --color-cream-muted: #3d244a;
+  --color-sage: #276337;
+  --color-sage-light: #1e4f2c;
+  --color-coral: #b83618;
+  --color-coral-light: #9e2a10;
+
+  /* Typography Colors - High Contrast Deep Plum & Charcoal (Zero washed-out text) */
+  --text-main: #190924;
+  --text-primary: #271236;
+  --text-secondary: #523c5e;
+  --text-muted: #6f597c;
+  --text-gold: #7d5e06;
+  --text-terracotta: #b84b29;
+  --text-on-accent: #ffffff;
+
+  /* Status Colors (Rich, Vivid, Legible on Light Backgrounds) */
+  --status-healthy-bg: #e6f6ec;
+  --status-healthy-border: #a1dcb4;
+  --status-healthy-text: #1b5e20;
+
+  --status-low-bg: #fdf6df;
+  --status-low-border: #f7df8f;
+  --status-low-text: #8c5d03;
+
+  --status-critical-bg: #fde8e5;
+  --status-critical-border: #f8b4a8;
+  --status-critical-text: #b72b15;
+
+  --status-out-bg: #fde7eb;
+  --status-out-border: #f8abb9;
+  --status-out-text: #a61234;
+
+  --status-expiring-bg: #feeedb;
+  --status-expiring-border: #f9cca0;
+  --status-expiring-text: #9e460b;
+
+  --status-expired-bg: #fad2d8;
+  --status-expired-border: #ee8fa0;
+  --status-expired-text: #8a0c26;
+
+  /* Borders & Dividers */
+  --border-subtle: #e2d7c9;
+  --border-medium: #d4c6b4;
+  --border-card: #ded2c2;
+  --border-input: #cfbeab;
+  --border-focus: #b84b29;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #7a1d3f 0%, #b84b29 100%);
+  --gradient-gold: linear-gradient(135deg, #b8860b 0%, #b84b29 100%);
+  --gradient-terracotta: linear-gradient(135deg, #b84b29 0%, #c85a38 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #fbf8f3 100%);
+  --gradient-card-elevated: linear-gradient(145deg, #ffffff 0%, #f7f2ea 100%);
+  --gradient-dark-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(245, 239, 230, 0.96) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(35, 15, 45, 0.07);
+  --shadow-md: 0 4px 14px rgba(35, 15, 45, 0.08), 0 1px 3px rgba(35, 15, 45, 0.04);
+  --shadow-lg: 0 14px 30px rgba(35, 15, 45, 0.11), 0 3px 10px rgba(35, 15, 45, 0.05);
+  --shadow-glow-terracotta: 0 0 16px rgba(184, 75, 41, 0.18);
+  --shadow-glow-gold: 0 0 14px rgba(140, 106, 8, 0.18);
+  --shadow-glow-wine: 0 0 18px rgba(110, 25, 57, 0.16);
+
+  /* Animation transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s ease;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout dimensions */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 78px;
+  --topbar-height: 72px;
+}
