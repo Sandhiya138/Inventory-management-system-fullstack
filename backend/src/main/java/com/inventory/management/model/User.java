@@ -47,7 +47,7 @@ public class User {
     @Column(nullable = false, length = 20)
     private UserStatus status = UserStatus.ACTIVE;
 
-    @Column(name = "created_at", nullable = false, updatable = false)
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at")

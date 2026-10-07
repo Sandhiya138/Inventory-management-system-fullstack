@@ -62,21 +62,30 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        List<String> origins = Arrays.stream(allowedOrigins.split(","))
-                .map(String::trim)
-                .filter(s -> !s.isEmpty())
-                .toList();
+        java.util.List<String> origins = new java.util.ArrayList<>();
+        origins.add("http://localhost:3000");
+        origins.add("http://localhost:5173");
+        origins.add("https://*.vercel.app");
+
+        if (allowedOrigins != null && !allowedOrigins.trim().isEmpty()) {
+            Arrays.stream(allowedOrigins.split(","))
+                    .map(String::trim)
+                    .map(s -> s.replaceAll("/+$", ""))
+                    .filter(s -> !s.isEmpty())
+                    .forEach(origins::add);
+        }
 
         if (origins.contains("*")) {
             configuration.setAllowedOriginPatterns(List.of("*"));
         } else {
-            configuration.setAllowedOrigins(origins);
+            configuration.setAllowedOriginPatterns(origins);
         }
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"));
         configuration.setExposedHeaders(List.of("Authorization"));
         configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
