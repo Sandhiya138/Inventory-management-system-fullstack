@@ -28,5 +28,5 @@ COPY --from=build /app/dist ./dist
 ENV PORT=3000
 EXPOSE 3000
 
-# -s flag enables SPA fallback to /index.html for client-side routing
-CMD ["sh", "-c", "serve -s dist -l ${PORT:-3000}"]
+# -s flag enables SPA fallback to /index.html; tcp://0.0.0.0 binds to all network interfaces
+CMD ["sh", "-c", "serve -s dist -l tcp://0.0.0.0:${PORT:-3000}"]
