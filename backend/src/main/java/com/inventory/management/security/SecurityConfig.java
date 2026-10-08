@@ -66,6 +66,8 @@ public class SecurityConfig {
         origins.add("http://localhost:3000");
         origins.add("http://localhost:5173");
         origins.add("https://*.vercel.app");
+        origins.add("https://*.railway.app");
+        origins.add("https://*.up.railway.app");
 
         if (allowedOrigins != null && !allowedOrigins.trim().isEmpty()) {
             Arrays.stream(allowedOrigins.split(","))
