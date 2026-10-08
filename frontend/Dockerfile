@@ -17,16 +17,16 @@ ENV VITE_API_URL=$VITE_API_URL
 
 RUN npm run build
 
-# Stage 2: Serve using lightweight, fast 'serve'
+# Stage 2: Serve using Node.js native server
 FROM node:20-alpine
 WORKDIR /app
 
-RUN npm install -g serve
+COPY package*.json ./
+COPY server.js ./
 COPY --from=build /app/dist ./dist
 
 # Railway provides PORT dynamically
 ENV PORT=3000
 EXPOSE 3000
 
-# -s flag enables SPA fallback to /index.html; tcp://0.0.0.0 binds to all network interfaces
-CMD ["sh", "-c", "serve -s dist -l tcp://0.0.0.0:${PORT:-3000}"]
+CMD ["node", "server.js"]
